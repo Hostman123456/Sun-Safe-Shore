@@ -1,0 +1,63 @@
+.option {
+    background-image: url(option\ wood.jfif);
+    width: 200px;
+    height: 200px;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Tiki\ Tropic.ttf);
+ }
+ 
+ * {
+    font-family: myFirstFont;
+ }
+
+
+
+nav {
+	background-image: url(wood.jfif);
+	border: 5px solid #63492b;
+    border-radius: 25px;
+    margin-bottom: 500px;
+ }
+ 
+
+
+
+img {
+    width: 200px;
+}
+
+
+body {
+    background-image: url("background.jpg");
+
+}
+
+
+#sun-safe {
+    display: inline-flex;
+    margin-right: 500px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+#title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: aquamarine;
+    text-align: center;
+}
+
+
+#nav_options {
+    display: inline-flex;
+    color: white;
+    flex-direction: row;
+}
+
