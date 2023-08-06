@@ -61,3 +61,13 @@ body {
     flex-direction: row;
 }
 
+
+.description:hover {
+    display: inline;
+}
+
+
+#home_description {
+    display: none;
+}
+
