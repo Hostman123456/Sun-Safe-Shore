@@ -1,14 +1,11 @@
 let logo = document.getElementById("sun-safe")
 let nav = document.querySelector("nav")
 let home_description = document.getElementById("home_description")
-let home_button = document.getElementById("home_button")
+let home_button = document.getElementById("actual-home-button")
 let cancer_types_description = document.getElementById("cancer_types_description")
-
-home_button.addEventListener("mouseenter", revealDescription )
-
-function revealDescription() {
-    home_description.style.visibility = "visible"
-}
+let home = document.getElementById("home")
+let cancer_types = document.getElementById("cancer-types")
+let cancer_types_button = document.getElementById("cancer_types_button")
 
 
 var funky_boi = new Audio('funky_yokai.mp3')
@@ -17,12 +14,16 @@ funky_boi.play()
 
 
 function cancer_types_href() {
-    window.open("hub_copy.html")
+    home.style.display = "none"
+}
+
+cancer_types_button.onclick = function() {
+    home.style.display = "none"
 }
 
 
-function showCancerDescription() {
-    cancer_types_description.style.display = "inline"
+home_button.onclick = function() {
+    cancer_types.style.display = "none"
 }
 
 

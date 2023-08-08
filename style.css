@@ -63,37 +63,37 @@ body {
 }
 
 #cancer_types_button #cancer_types_description {
-    display: none;
-  }
-  
+  display: none;
+}
+
 #cancer_types_button:hover #cancer_types_description {
-    display: block;
-  }
+  display: block;
+}
 
 
 #home_button #home_description {
-    display: none;
-  }
-  
+  display: none;
+}
+
 #home_button:hover #home_description {
-    display: block;
-  }
+  display: block;
+}
 
 #how_to_stay_safe_button #how_to_stay_safe_description {
-    display: none;
-  }
-  
+  display: none;
+}
+
 #how_to_stay_safe_button:hover #how_to_stay_safe_description {
-    display: block;
-  }
+  display: block;
+}
 
 #quiz_button #quiz_description {
-    display: none;
-  }
-  
+  display: none;
+}
+
 #quiz_button:hover #quiz_description {
-    display: block;
-  }
+  display: block;
+}
 
 #plug {
     background-color: white;
@@ -121,4 +121,9 @@ body {
 
 #cancer-types {
   display: inline;
+}
+
+.cancer-type {
+  background-image: url(cancer-type-wood.jfif);
+  margin: 50px;
 }
