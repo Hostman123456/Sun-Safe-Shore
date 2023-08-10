@@ -13,28 +13,20 @@
     font-family: myFirstFont;
  }
 
-
-
 nav {
 	background-image: url(wood.jfif);
 	border: 5px solid #63492b;
-    border-radius: 25px;
-
-    display: inline-flex;
-    justify-content: center;
+  border-radius: 25px;
+  display: inline-flex;
+  justify-content: center;
  }
  
-
-
-
 img {
     width: 200px;
 }
 
-
 body {
     background-image: url("background.jpg");
-
 }
 
 
@@ -43,8 +35,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 
@@ -106,7 +96,6 @@ body {
     color: white;
 }
 
-
 #home {
   display: flex;
   justify-content: center;
@@ -124,6 +113,16 @@ body {
 }
 
 .cancer-type {
-  background-image: url(cancer-type-wood.jfif);
+  background-image: url(option_wood.jfif);
+  border-radius: 25px;
   margin: 50px;
+  color: white;
+  -webkit-text-stroke: thin goldenrod;
+  font-size: larger;
+  border: 5px solid black;
+}
+
+.cancer-description {
+  display: none;
+  background-color: #603b26;
 }

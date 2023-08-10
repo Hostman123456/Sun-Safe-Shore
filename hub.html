@@ -10,7 +10,7 @@
         <title>Sun Safe Hub</title>
     </head>
     <body>
-        <script src="script.js"></script>
+
         <nav>
             <div id = "sun-safe">
                 <img src="sun-safe.png" alt = "sun-safe-logo" />
@@ -22,7 +22,7 @@
                     <div id = "home_description" class="description"><p>Where you are!</p></div>
                 </div>
                 <div id = "cancer_types_button">
-                    <img onclick="cancer_types_href()" src = "cancer-types-button.jpeg"/>
+                    <img src = "cancer-types-button.jpeg"/>
 
                    <div id="cancer_types_description" class = "description" ><p>Learn about the most common skin cancers, such as melanoma</p></div>
                 </div>
@@ -46,21 +46,60 @@
             <img src = "image-of-our-most-glorious-leader.jpg" />
         </div>
         <div id="cancer-types">
-            <div class="cancer-type">
-                <h3>Melanoma</h3>
-                Definition- is a type of skin cancer that develops when melanocytes start to grow out of control. (Melanocytes gives the skin its tan or brown color/melanin)
+            <div class="cancer-type" onclick="toggleMelanomaDescription()">
+                <div id = "melanoma-header"><h3>Melanoma</h3></div>
+                <div id = "melanoma-description" class = "cancer-description">
+                is a type of skin cancer that develops when melanocytes(cells that give skin melanin) start to grow out of control.
                 <br>
-                -These cells are in the deep layer of the epidermis between the layers of basal cells. This skin cancer is dangerous because of its ability to spread to other organs rapidly if it is not treated at an early stage. 
+                These cells are in the deep layer of the epidermis. This skin cancer is dangerous because of its ability to spread to other organs rapidly if left unchecked. 
+                <br>
                 -Only 20-30% of melanomas are found in existing moles. While 70-80% arise on normal-looking skin. This makes it harder to identify melanoma. 
                 Occurs: When skin is exposed to ultraviolet (UV) radiation, it causes skin damage that triggers the melanocytes to produce more melanin, but only the melanin pigment attempts to protect the skin by causing the skin to darken or tan. Melanoma occurs when DNA damage due to UV radiation triggers mutations in the melanocytes, resulting in uncontrolled cellular growth.
-
             </div>
+            </div>
+            <div class = "cancer-type" onclick = "toggleBasalDescription()">
 
+
+                
+            <div id = "basal-cell-carcinoma-header"><h3>Basal Cell Carcinoma</h3></div>
+            <div id = "basal-cell-carcinoma-description" class = "cancer-description">
+<p>Very common (Around 3 million cases/year)
+Rolled border/central ulcer/transparent/discoloration 
+Basal cell produce new cell and old one dies.
+BCC grows slowly and most are curable if detected early.
+BCC occur due to DNA damages, causing basal cells to change/mutate leading to unremitting growth.
+90% are caused by UV radiation
+Diagnosis and treatment for BCC +77% from 1994-2014
+Mohs surgery used often to remove any BCC spots and the layer is later examined to see if any cancerous cells remains</p>
+</div>
+            </div>
+            <div class = "cancer-type" onclick = "toggleMerkelDescription()">
+
+               <div id = "merkel-cell-carcinoma-header"><h3>Merkel Cell Carcinoma</h3></div>
+               <div id = "merkel-cell-carcinoma-description" class = "cancer-description">
+<p>Rare, aggressive Skin Cancer (roughly 2000 per year)
+Appears as a flesh-colored or bluish-red nodule often on your face, neck or head, but can pop up anywhere
+Tends to grow and spread fast across the body
+Merkel cells are found in the the epidermis, the most outermost layer of your skin
+Largely affects age groups older than 65 years old
+Rates are steadily increasing (2000-2013, the rate spiked 95%)
+Majority of those affected seldom to protect their skin by using sunscreen
+The common treatment that patients adhere to is getting treatment to their needs or gaining the latest treatments to MCC
+The virus, Merkel Cell polyomavirus, lives on the skin and doesn’t show symptoms and this is the cause of Merkel cell Carcinoma
+Risk factors:
+Excessive Exposure to either artificial or natural sunlight
+A weakened immune system: Those that have HIV or take drugs that suppress the immune system response 
+History of other skin cancers
+Older Age
+Demographic: Those with lighter skins are more prone to this skin cancer</p>
+</div>
+            </div>
 
         </div>
 
 
 
-        <div id = "plug"><p>Have any questions or concerns? Please email <a href = mailto:"maxisnotarichguy@gmail.com" target = "_blank">maxisnotarichguy@gmail.com</a> </p></div>
+        <div id = "plug"><p>Have any questions or concerns? Please email <a href = mailto:"maxisnotarichguy@gmail.com" target = "_blank">maxisnotarichguy@gmail.com</a> Also, thanks to pngtree for the images! </p></div>
+        <script src="script.js"></script>
     </body>
 </html>
