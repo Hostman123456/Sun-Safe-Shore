@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: myFirstFont;
-    src: url(Tiki\ Tropic.ttf);
+    src: url(fonts/Tiki\ Tropic.ttf);
  }
  
  * {
@@ -14,7 +14,7 @@
  }
 
 nav {
-	background-image: url(wood.jfif);
+	background-image: url(images/wood.jfif);
 	border: 5px solid #63492b;
   border-radius: 25px;
   display: inline-flex;
@@ -26,7 +26,7 @@ img {
 }
 
 body {
-    background-image: url("background.jpg");
+    background-image: url("images/background.jpg");
 }
 
 
@@ -103,7 +103,7 @@ body {
   border:10px solid brown;
   margin-top: 250px;
   margin-bottom: 250px;
-  background-image: url(option_wood.jfif);
+  background-image: url(images/option_wood.jfif);
   color: white;
   font-size: x-large;
 }
@@ -113,7 +113,7 @@ body {
 }
 
 .cancer-type {
-  background-image: url(option_wood.jfif);
+  background-image: url(images/option_wood.jfif);
   border-radius: 25px;
   margin: 50px;
   color: white;
