@@ -1,15 +1,18 @@
 // Select elements
 let button = document.querySelector("button")
-let story = document.getElementById("story_result")
+let leaderboard = document.getElementById("leaderboard")
 let input = document.querySelectorAll("input")
 let form = document.querySelector("form")
 let title = document.querySelector("title")
 
 // Add event
-button.addEventListener("click", grabInput)
+button.addEventListener("click", sendResults)
 
-// Function
-function grabInput(event){
+// const app = firebase.initializeApp(firebaseConfig);
+
+
+function sendResults(event){
+    event.preventDefault()
     let noblanks = true
     for (let a = 0; a<4; a++) {
         if (input[a].value == "") {
@@ -20,20 +23,44 @@ function grabInput(event){
         alert("fill all fields")
     }
     else {
- 
 
-    event.preventDefault()  // Prevent the page from reload and doing defaults
+        // scoring logic
+        let score = 0
+        let correctanswers = ["", "pizza", "exercise", "crazy"]
+        for (x = 1; x<input.length; x++) {
+            if (input[x].value.toLowerCase() == correctanswers[x]) {
+                score = score + 1
+            }
+        }
+    // // defining data variables
+    // let name = input[0].value
+    // let finalscore = score
+    
+    // // Create db instance
+    // let db = app.firestore();
+    // console.log(db)
+    
+    // // Create data
+    // const QuizResult = {
+    //   name: name,
+    //   score: finalscore
+    // }
+    
+    // // send data
+    // db.collection("leaderboard").add(newQuizResult)
+    // .then(function(data){
+    //   console.log("Data sent")
+    // })
 
-    // Display 
     form.style.display = "none"
-    story.style.display = "inline"
-    title.innerText = input[0].value
-    story.innerHTML = "Last night I ate a " + input[1].value +" and today I just had to "+input[2].value+ ". What a "+input[3].value+" day!"
-    }
-
+    leaderboard.style.display = "inline"
+    leaderboard.innerHTML = "Last night I ate a " + input[1].value +" and today I just had to "+input[2].value+ ". What a "+input[3].value+" day!"+"Score: " + score + " out of " + (input.length-1)
+}
 }
 
 
-onkeydown = function() {
-    title.innerText = input[0].value
+
+
+onkeyup = function() {
+    title.innerText = input[0].value + "'s Sun Safe Quiz"
 }

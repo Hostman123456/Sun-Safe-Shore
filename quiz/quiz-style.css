@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
+
 /* font-family: 'IBM Plex Serif', serif; */
 /* font-family: 'IBM Plex Sans', sans-serif; */
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
+ }
+ 
+ * {
+    font-family: myFirstFont;
+ }
 
 body{
     margin:0;
-}
-
-h1, button{
-    font-family: 'IBM Plex Serif', serif;
+    background-image: url(../images/background.jpg);
+    font-size: larger;
 }
 
 
-p, label, input{
-    font-family: 'IBM Plex Sans', sans-serif;
-}
 
 h1{
     font-size: 50px;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 .main_container{
@@ -25,17 +30,23 @@ h1{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 #main_title{
     position: absolute;
     top:0;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 .form_container{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 .adlib{
@@ -43,11 +54,15 @@ h1{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 .adlib label{
     margin-right: 10px;
     text-transform: uppercase;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 .adlib input{
@@ -59,6 +74,8 @@ h1{
     caret-color: #2989d8;
     text-align: center;
     font-size: 16px;
+    font-family: myFirstFont;
+    src: url(../fonts/Tiki_Tropic.ttf);
 }
 
 input:focus{
@@ -74,16 +91,16 @@ button{
   box-shadow : 0 1px 4px rgba(0,0,0,.6);
   font-size : 20px;
   font-weight : bold;
-  color : #fff;
+  color : black;
+  -webkit-text-stroke: thin goldenrod;
   text-shadow : 0 1px 3px rgba(0,0,0,.4);
   text-decoration : none;
   transition: all 2s;
-  border-color : #2989d8;
-  background-color: #2989d8;
+  background-image: url(../images/option_wood.jfif);
 }
 
 button:hover{
-    border-color: #c80a00;
-    background: #c80a00;
-    box-shadow : -4px 5px 4px rgba(0,0,0,.8);    
+    box-shadow : -4px 5px 4px rgba(0,0,0,.8); 
+    color: black;  
+    -webkit-text-stroke: thin black; 
 }
