@@ -1,3 +1,26 @@
+// Getting Firebase in the first place
+const firebaseConfig = {
+    apiKey: "AIzaSyBADBJkkJbZx9akXv_DyWevltm_8NULvEA",
+    authDomain: "sun-safe-shore-leaderboard.firebaseapp.com",
+    projectId: "sun-safe-shore-leaderboard",
+    storageBucket: "sun-safe-shore-leaderboard.appspot.com",
+    messagingSenderId: "848523464041",
+    appId: "1:848523464041:web:519e3ac19c88f77b7dc1f8",
+    measurementId: "G-0FJP8PB88X"
+  };
+  const app = firebase.initializeApp(firebaseConfig);
+
+
+
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+      var x = a[key];
+      var y = b[key];
+      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
+
+
 // Select elements
 let button = document.querySelector("button")
 let leaderboard = document.getElementById("leaderboard")
@@ -8,7 +31,6 @@ let title = document.querySelector("title")
 // Add event
 button.addEventListener("click", sendResults)
 
-// const app = firebase.initializeApp(firebaseConfig);
 
 
 function sendResults(event){
@@ -32,34 +54,52 @@ function sendResults(event){
                 score = score + 1
             }
         }
-    // // defining data variables
-    // let name = input[0].value
-    // let finalscore = score
+    // defining data variables
+    let name = input[0].value
+    let finalscore = score
     
-    // // Create db instance
-    // let db = app.firestore();
-    // console.log(db)
+    // Create db instance
+    let db = app.firestore();
+    console.log(db)
     
-    // // Create data
-    // const QuizResult = {
-    //   name: name,
-    //   score: finalscore
-    // }
+     // Create data
+     const newAttempt = {
+       name: name,
+       score: finalscore,
+     };
     
-    // // send data
-    // db.collection("leaderboard").add(newQuizResult)
-    // .then(function(data){
-    //   console.log("Data sent")
-    // })
+    // send data
+    db.collection("leaderboard").add(newAttempt)
+    .then(function(data){
+      console.log("Data sent")
+    })
 
     form.style.display = "none"
     leaderboard.style.display = "inline"
     leaderboard.innerHTML = "Last night I ate a " + input[1].value +" and today I just had to "+input[2].value+ ". What a "+input[3].value+" day!"+"Score: " + score + " out of " + (input.length-1)
+
+    db = firebase.firestore();
+    db = db.collection("leaderboard")
+    db = db.orderBy("score", "desc")
+    const ScoreCollection = db;
+
+    let querySnapshot = ScoreCollection.get()
+.then(function(querySnapshot) {
+    querySnapshot.docs = sortByKey(querySnapshot.docs, "score")
+  for (let i = 0; i < querySnapshot.docs.length; i++) {
+    const submission = querySnapshot.docs[i];
+
+    let challenger = document.createElement("ol")
+    challenger.innerHTML = submission.data().name + " Score : " + submission.data().score
+    leaderboard.appendChild(challenger) 
+  }
+
+})
+.catch(function(error) {
+  console.error("Error getting documents: ", error);
+});
 }
 }
-
-
-
 
 onkeyup = function() {
     title.innerText = input[0].value + "'s Sun Safe Quiz"
