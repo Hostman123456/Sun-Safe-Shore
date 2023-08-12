@@ -104,3 +104,10 @@ button:hover{
     color: black;  
     -webkit-text-stroke: thin black; 
 }
+
+
+ol {
+    background-color:black ;
+    color: #F9D199;
+    border: 5px solid #F9D199;
+}

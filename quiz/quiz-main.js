@@ -27,11 +27,10 @@ let leaderboard = document.getElementById("leaderboard")
 let input = document.querySelectorAll("input")
 let form = document.querySelector("form")
 let title = document.querySelector("title")
+let ranks = document.querySelector("ol")
 
 // Add event
 button.addEventListener("click", sendResults)
-
-
 
 function sendResults(event){
     event.preventDefault()
@@ -76,7 +75,7 @@ function sendResults(event){
 
     form.style.display = "none"
     leaderboard.style.display = "inline"
-    leaderboard.innerHTML = "Last night I ate a " + input[1].value +" and today I just had to "+input[2].value+ ". What a "+input[3].value+" day!"+"Score: " + score + " out of " + (input.length-1)
+    leaderboard.innerHTML = "Score: " + score + " out of " + (input.length-1)
 
     db = firebase.firestore();
     db = db.collection("leaderboard")
@@ -89,9 +88,14 @@ function sendResults(event){
   for (let i = 0; i < querySnapshot.docs.length; i++) {
     const submission = querySnapshot.docs[i];
 
-    let challenger = document.createElement("ol")
+    let challenger = document.createElement("li")
+    if (submission.data().name == newAttempt.name) {
+      challenger.style.border = "5px solid black"
+      challenger.style.backgroundColor = "black"
+      challenger.style.color = "green"
+    }
     challenger.innerHTML = submission.data().name + " Score : " + submission.data().score
-    leaderboard.appendChild(challenger) 
+    ranks.appendChild(challenger) 
   }
 
 })
