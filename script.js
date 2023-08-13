@@ -10,8 +10,12 @@ let melanoma_description = document.getElementById("melanoma-description")
 let basal_description = document.getElementById("basal-cell-carcinoma-description")
 let merkel_description = document.getElementById("merkel-cell-carcinoma-description")
 let quiz_button = document.getElementById("quiz_button")
+let how_to_stay_safe_button = document.getElementById("how_to_stay_safe_button")
+let how_to_stay_safe = document.getElementById("how-to-stay-safe")
 
 cancer_types.style.display = "none"
+how_to_stay_safe.style.display = "none"
+
 
 var funky_boi = new Audio('audio/funky_yokai.mp3')
 funky_boi.loop = true
@@ -49,14 +53,23 @@ function toggleMerkelDescription() {
 
 home_button.onclick = function() {
     cancer_types.style.display = "none"
+    how_to_stay_safe.style.display = "none"
     home.style.display = "flex"
 }
 
 cancer_types_button.onclick = function() {
     home.style.display = "none"
     cancer_types.style.display = "inline"
+    how_to_stay_safe.style.display = "none"
 }
 
+
+
+how_to_stay_safe_button.onclick = function() {
+    home.style.display="none"
+    cancer_types.style.display = "none"
+    how_to_stay_safe.style.display = "block"
+}
 
 quiz_button.onclick = function() {
     window.location = "quiz/quiz-index.html"
