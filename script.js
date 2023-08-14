@@ -9,9 +9,11 @@ let cancer_types_button = document.getElementById("cancer_types_button")
 let melanoma_description = document.getElementById("melanoma-description")
 let basal_description = document.getElementById("basal-cell-carcinoma-description")
 let merkel_description = document.getElementById("merkel-cell-carcinoma-description")
+let squamous_description = document.getElementById("squamous-cell-carcinoma-description")
 let quiz_button = document.getElementById("quiz_button")
 let how_to_stay_safe_button = document.getElementById("how_to_stay_safe_button")
 let how_to_stay_safe = document.getElementById("how-to-stay-safe")
+let body = document.querySelector("body")
 
 cancer_types.style.display = "none"
 how_to_stay_safe.style.display = "none"
@@ -19,8 +21,10 @@ how_to_stay_safe.style.display = "none"
 
 var funky_boi = new Audio('audio/funky_yokai.mp3')
 funky_boi.loop = true
+body.onclick = function() {
+    funky_boi.play()
+}
 
-funky_boi.play()
 
 function toggleMelanomaDescription() {
     if (melanoma_description.style.display == "block") {
@@ -49,6 +53,15 @@ function toggleMerkelDescription() {
     }
 }
 
+function toggleSquamousDescription() {
+    if (squamous_description.style.display == "block") {
+        squamous_description.style.display = "none"
+    }
+    else {
+    squamous_description.style.display = "block"
+    }
+
+}
 
 
 home_button.onclick = function() {
