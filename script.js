@@ -13,10 +13,13 @@ let squamous_description = document.getElementById("squamous-cell-carcinoma-desc
 let quiz_button = document.getElementById("quiz_button")
 let how_to_stay_safe_button = document.getElementById("how_to_stay_safe_button")
 let how_to_stay_safe = document.getElementById("how-to-stay-safe")
+let sources_button = document.getElementById("sources_button")
+let sources=document.getElementById("my_sources")
 let body = document.querySelector("body")
 
 cancer_types.style.display = "none"
 how_to_stay_safe.style.display = "none"
+sources.style.display = "none"
 
 
 var funky_boi = new Audio('audio/funky_yokai.mp3')
@@ -67,11 +70,15 @@ function toggleSquamousDescription() {
 home_button.onclick = function() {
     cancer_types.style.display = "none"
     how_to_stay_safe.style.display = "none"
+    sources.style.display = "none"
     home.style.display = "flex"
 }
 
+
+
 cancer_types_button.onclick = function() {
     home.style.display = "none"
+    sources.style.display = "none"
     cancer_types.style.display = "inline"
     how_to_stay_safe.style.display = "none"
 }
@@ -80,9 +87,18 @@ cancer_types_button.onclick = function() {
 
 how_to_stay_safe_button.onclick = function() {
     home.style.display="none"
+    sources.style.display = "none"
     cancer_types.style.display = "none"
     how_to_stay_safe.style.display = "block"
 }
+
+sources_button.onclick = function() {
+    cancer_types.style.display = "none"
+    how_to_stay_safe.style.display = "none"
+    home.style.display = "none"
+    sources.style.display = "inline"
+}
+
 
 quiz_button.onclick = function() {
     window.location = "quiz/quiz-index.html"

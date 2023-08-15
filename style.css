@@ -85,6 +85,14 @@ body {
   display: block;
 }
 
+#sources_button #sources_description {
+  display: none;
+}
+
+#sources_button:hover #sources_description {
+  display: block;
+}
+
 #plug {
     background-color: white;
     border: 10px solid black;
@@ -141,4 +149,26 @@ body {
 
 a {
   background-color: white;
+}
+
+
+#actual_sources {
+  background-image: url(images/option_wood.jfif);
+  border-radius: 25px;
+  margin: 50px;
+  color: white;
+  -webkit-text-stroke: thin goldenrod;
+  font-size: larger;
+  border: 5px solid black;
+}
+
+
+#sources {
+  background-image: url(images/option_wood.jfif);
+  border-radius: 25px;
+  margin: 50px;
+  color: white;
+  -webkit-text-stroke: thin goldenrod;
+  font-size: larger;
+  border: 5px solid black;
 }
