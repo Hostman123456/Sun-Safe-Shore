@@ -50,7 +50,7 @@ h1{
 }
 
 .adlib{
-    display:flex;
+    display:inline-flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
@@ -110,4 +110,12 @@ ol {
     background-color:black ;
     color: #F9D199;
     border: 5px solid #F9D199;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

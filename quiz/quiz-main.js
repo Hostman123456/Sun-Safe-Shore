@@ -47,7 +47,7 @@ function sendResults(event){
 
         // scoring logic
         let score = 0
-        let correctanswers = ["", "pizza", "exercise", "crazy"]
+        let correctanswers = ["", "merkel cell carcinoma", "20%-30%", "10-4"]
         for (x = 1; x<input.length; x++) {
             if (input[x].value.toLowerCase() == correctanswers[x]) {
                 score = score + 1
